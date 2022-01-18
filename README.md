@@ -1,4 +1,4 @@
-# [Név]
+# Poós Dániel
 
 ## Hogyan kezdj neki?
 
