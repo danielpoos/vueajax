@@ -1,27 +1,35 @@
 import Vue from 'vue'
 import App from './App.vue'
 import VueRouter from 'vue-router'
-import Statue from './components/Statues.vue'
-import Statues from './components/Statues.vue'
-import Info from './components/Info.vue'
+import Paintings from './components/Paintings.vue';
+import Statues from './components/Statues.vue';
+import Statue from './components/Statue.vue';
+import Info from './components/Info.vue';
+
 
 Vue.use(VueRouter)
 Vue.config.productionTip = false
-const routes =[
+const routes = [
   {
-    path:'/',
-    component:Info,
-  },{
-    path:'/statues',
-    component:Statues,
-  },{
-    path:'/statue/:id',
-    component:Statue,
+    path: '/',
+    component: Paintings
+  },
+  {
+    path: '/statues',
+    component: Statues
+  },
+  {
+    path: '/statues/:id',
+    component: Statue
+  },
+  {
+    path: '/info',
+    component: Info
   }
 ];
 const router = new VueRouter({
   routes
-})
+});
 new Vue({
   render: h => h(App),
   router
