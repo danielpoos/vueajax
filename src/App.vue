@@ -1,6 +1,10 @@
 <template>
   <div id="app">
-
+    <nav>
+      <router-link to="/">Paintings</router-link>
+      <router-link to="/statues">Statues</router-link>
+      <router-link to="/info">Info</router-link>
+    </nav>
     <table>
       <thead>
         <tr>
@@ -46,15 +50,16 @@
     <button @click="loadData">Adatok betöltése</button>
   </div>
 </template>
-
 <script>
 
+import Paintings from './components/Paintings.vue';
 export default {
-  name: 'App',
+  name: 'Statues',
   components: {
   },
   data() {
     return {
+      state:Paintings,
       mod_new: true, 
       saving: false,
       statue: {

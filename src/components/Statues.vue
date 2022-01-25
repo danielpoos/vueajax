@@ -2,6 +2,7 @@
   <div>
       <ul>
           <StatueItem
+          v-for="statue in statues"
           v-bind:key="statue.person"
           :statue="statue"
           @statue-item-changed="Changed"
